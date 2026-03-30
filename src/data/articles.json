@@ -1,0 +1,92 @@
+[
+  {
+    "id": "art-001",
+    "title": "AI 에이전트가 소프트웨어 개발을 바꾸는 5가지 방식",
+    "summary": "코드 생성을 넘어 디버깅, 코드리뷰, 배포까지 AI 에이전트가 개발 워크플로우 전반에 침투하고 있다.",
+    "implications": [
+      "주니어 개발자의 역할이 '코드 작성'에서 'AI 결과물 검증'으로 전환될 수 있음",
+      "CI/CD 파이프라인에 AI 에이전트가 기본 구성요소로 포함될 전망",
+      "코드 품질 기준이 '사람이 읽기 쉬운 코드'에서 'AI가 이해하기 쉬운 코드'로 확장"
+    ],
+    "tags": ["AI", "개발도구", "에이전트", "DevOps"],
+    "sourceUrl": "https://example.com/ai-agents-dev",
+    "sourceName": "GeekNews",
+    "createdAt": "2026-03-08",
+    "status": "pending"
+  },
+  {
+    "id": "art-002",
+    "title": "유럽 AI Act 시행 6개월: 실제로 달라진 것들",
+    "summary": "EU AI Act 시행 이후 기업들의 대응 현황과 실질적 변화를 정리한 보고서.",
+    "implications": [
+      "한국 기업도 EU 시장 대상 서비스라면 규제 준수 필수",
+      "고위험 AI 시스템 분류에 해당하는 서비스들의 투명성 보고서 의무화",
+      "오픈소스 AI 모델도 일정 규모 이상이면 규제 대상에 포함"
+    ],
+    "tags": ["AI규제", "EU", "컴플라이언스", "정책"],
+    "sourceUrl": "https://example.com/eu-ai-act",
+    "sourceName": "TechCrunch",
+    "createdAt": "2026-03-07",
+    "status": "pending"
+  },
+  {
+    "id": "art-003",
+    "title": "Next.js 16에서 달라진 캐싱 전략 완전 정리",
+    "summary": "Next.js 16의 새로운 캐싱 모델과 이전 버전과의 차이점을 실제 코드 예시로 설명.",
+    "implications": [
+      "기존 ISR 기반 캐싱에서 더 세밀한 제어가 가능해짐",
+      "서버 컴포넌트의 기본 캐싱 동작이 변경되어 마이그레이션 시 주의 필요",
+      "Edge Runtime과의 캐싱 통합으로 글로벌 성능 최적화 용이"
+    ],
+    "tags": ["Next.js", "프론트엔드", "캐싱", "웹개발"],
+    "sourceUrl": "https://example.com/nextjs-16-caching",
+    "sourceName": "Vercel Blog",
+    "createdAt": "2026-03-06",
+    "status": "pending"
+  },
+  {
+    "id": "art-004",
+    "title": "RAG vs Fine-tuning: 2026년 현실적인 선택 가이드",
+    "summary": "RAG와 파인튜닝의 장단점을 비용, 성능, 유지보수 관점에서 비교 분석.",
+    "implications": [
+      "대부분의 엔터프라이즈 유스케이스에서는 RAG가 여전히 가성비 우위",
+      "도메인 특화 작업(의료, 법률)에서는 파인튜닝 + RAG 하이브리드가 최적",
+      "벡터 DB 시장이 급성장하면서 RAG 인프라 비용이 지속적으로 하락 중"
+    ],
+    "tags": ["LLM", "RAG", "파인튜닝", "MLOps"],
+    "sourceUrl": "https://example.com/rag-vs-finetuning",
+    "sourceName": "AI Newsletter",
+    "createdAt": "2026-03-05",
+    "status": "pending"
+  },
+  {
+    "id": "art-005",
+    "title": "스타트업 창업자가 알아야 할 2026 VC 투자 트렌드",
+    "summary": "올해 VC 투자 시장의 핵심 키워드와 투자자들이 주목하는 영역을 정리.",
+    "implications": [
+      "AI 인프라/도구 스타트업에 대한 투자가 전년 대비 40% 증가",
+      "B2B SaaS의 PMF 기준이 'ARR $1M'에서 'Net Revenue Retention 130%+'로 이동",
+      "Climate tech과 Defense tech이 새로운 투자 핫섹터로 부상"
+    ],
+    "tags": ["스타트업", "VC", "투자", "트렌드"],
+    "sourceUrl": "https://example.com/vc-trends-2026",
+    "sourceName": "The Information",
+    "createdAt": "2026-03-04",
+    "status": "pending"
+  },
+  {
+    "id": "art-006",
+    "title": "Rust로 시스템 프로그래밍 입문: 메모리 안전성의 혁명",
+    "summary": "C/C++ 대비 Rust의 메모리 안전성 장점과 실제 시스템 프로그래밍 적용 사례.",
+    "implications": [
+      "Linux 커널에 Rust 코드 비중이 점차 증가하며 생태계 성숙 가속화",
+      "임베디드/IoT 영역에서 Rust 채택이 빠르게 확산",
+      "Rust 개발자 수요 대비 공급 부족으로 높은 연봉 프리미엄 유지"
+    ],
+    "tags": ["Rust", "시스템프로그래밍", "메모리안전", "프로그래밍언어"],
+    "sourceUrl": "https://example.com/rust-systems",
+    "sourceName": "GeekNews",
+    "createdAt": "2026-03-03",
+    "status": "pending"
+  }
+]

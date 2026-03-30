@@ -1,0 +1,17 @@
+{
+  "dataDir": "./data",
+  "gmailCredentialsPath": "~/.openclaw/gmail-api/credentials.json",
+  "gmailTokenPath": "~/.openclaw/gmail-api/token.json",
+  "anthropicModel": "claude-sonnet-4-6",
+  "schedule": {
+    "cronExpression": "30 7,15,23 * * *",
+    "timezone": "Asia/Seoul"
+  },
+  "notifications": {
+    "enabled": false,
+    "telegram": {
+      "botToken": "",
+      "chatId": ""
+    }
+  }
+}

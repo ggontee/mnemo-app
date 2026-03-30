@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "name": "TLDR",
+      "senderMatch": "dan@tldrnewsletter.com",
+      "parseStrategy": "multi-topic"
+    },
+    {
+      "name": "아웃스탠딩",
+      "senderMatch": "newsletter@outstanding.kr",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "OTTER LETTER",
+      "senderMatch": "otterletter@mediasphere.kr",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "a16z crypto",
+      "senderMatch": "a16zcrypto@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "주간 실리콘밸리",
+      "senderMatch": "svweekly@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "Net Interest",
+      "senderMatch": "netinterest@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "Not Boring",
+      "senderMatch": "notboring@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "전종현의 인사이트",
+      "senderMatch": "hyuni@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "a16z",
+      "senderMatch": "a16z@substack.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "Stratechery",
+      "senderMatch": "email@stratechery.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "Multicoin Capital",
+      "senderMatch": "multicoincapital@mail.beehiiv.com",
+      "parseStrategy": "single-article"
+    },
+    {
+      "name": "Lenny's Newsletter",
+      "senderMatch": "lenny@substack.com",
+      "parseStrategy": "single-article"
+    }
+  ],
+  "gmailQuery": "",
+  "lookbackDays": 1,
+  "maxArticlesPerNewsletter": 10
+}

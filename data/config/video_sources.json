@@ -1,0 +1,48 @@
+{
+  "channels": [
+    {
+      "name": "이효석아카데미",
+      "channelId": "UCxvdCnvGODDyuvnELnLkQWw",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCxvdCnvGODDyuvnELnLkQWw"
+    },
+    {
+      "name": "안될공학",
+      "channelId": "UCeN2YeJcBCRJoXgzF_OU3qw",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCeN2YeJcBCRJoXgzF_OU3qw"
+    },
+    {
+      "name": "슈카월드",
+      "channelId": "UCsJ6RuBiTVWRX156FVbeaGg",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsJ6RuBiTVWRX156FVbeaGg"
+    },
+    {
+      "name": "매경 월가월부",
+      "channelId": "UCIipmgxpUxDmPP-ma3Ahvbw",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIipmgxpUxDmPP-ma3Ahvbw"
+    },
+    {
+      "name": "지식인사이드",
+      "channelId": "UCA_hgsFzmynpv1zkvA5A7jA",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCA_hgsFzmynpv1zkvA5A7jA"
+    },
+    {
+      "name": "박종훈의 지식한방",
+      "channelId": "UCOB62fKRT7b73X7tRxMuN2g",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOB62fKRT7b73X7tRxMuN2g"
+    },
+    {
+      "name": "월가아재의 과학적 투자",
+      "channelId": "UCpqD9_OJNtF6suPpi6mOQCQ",
+      "rssUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpqD9_OJNtF6suPpi6mOQCQ"
+    }
+  ],
+  "keywords": ["경제", "투자", "기술", "AI", "트렌드", "금융", "시사"],
+  "maxVideosPerRun": 5,
+  "minDuration": 180,
+  "maxDuration": 3600,
+  "preferredLanguages": ["ko", "en"],
+  "transcriptFallback": {
+    "primary": "youtube-transcript-api",
+    "secondary": "supadata"
+  }
+}

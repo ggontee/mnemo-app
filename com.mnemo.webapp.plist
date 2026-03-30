@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mnemo.webapp</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/start_webapp.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/webapp_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/webapp_stderr.log</string>
+</dict>
+</plist>

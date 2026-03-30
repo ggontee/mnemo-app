@@ -1,0 +1,1 @@
+from pipeline.splitter.newsletter_splitter import split_batch, split_newsletter
