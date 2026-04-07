@@ -44,3 +44,9 @@ next-env.d.ts
 .env
 .env.local
 .env.production
+
+# 크롤링 원본 데이터
+data/raw/
+
+# 파이프라인 로그
+pipeline/cron.log
