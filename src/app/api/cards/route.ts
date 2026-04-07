@@ -109,9 +109,9 @@ export async function PATCH(request: NextRequest) {
     cards[idx].userComment = userComment;
   }
 
-  // kept 상태로 변경 시 AI 질문 자동 생성
+  // kept 상태로 변경 시 빈 질문 배열 초기화 (사용자가 직접 질문 추가)
   if (status === "kept" && !cards[idx].aiQuestions) {
-    cards[idx].aiQuestions = generateQuestions(cards[idx]);
+    cards[idx].aiQuestions = [];
   }
 
   await writeCards(cards);

@@ -6,9 +6,13 @@ import os from "os";
 // Obsidian vault 경로
 const VAULT_BASE = path.join(
   os.homedir(),
+  "Library",
+  "Mobile Documents",
+  "iCloud~md~obsidian",
   "Documents",
-  "ggontee",
-  "20_Knowledge"
+  "Henry",
+  "Henry",
+  "10. 리서치 관련 문서"
 );
 
 const CARDS_PATH = path.resolve(process.cwd(), "data", "cards.json");
@@ -131,16 +135,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Card not found" }, { status: 404 });
     }
 
-    // 소스별 폴더 결정
-    const sourceFolder =
-      card.sourceType === "video" ? "YouTube" : "Newsletter";
-    const folderPath = path.join(VAULT_BASE, sourceFolder);
-    await fs.mkdir(folderPath, { recursive: true });
+    // 타겟 폴더에 직접 저장
+    await fs.mkdir(VAULT_BASE, { recursive: true });
 
     // 파일명: 날짜-제목.md
     const dateStr = card.createdAt.split("T")[0];
     const filename = `${dateStr} ${sanitizeFilename(card.title)}.md`;
-    const filePath = path.join(folderPath, filename);
+    const filePath = path.join(VAULT_BASE, filename);
 
     // MD 생성
     const markdown = cardToMarkdown(card);
@@ -179,12 +180,9 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: "Card not found" }, { status: 404 });
     }
 
-    const sourceFolder =
-      card.sourceType === "video" ? "YouTube" : "Newsletter";
-    const folderPath = path.join(VAULT_BASE, sourceFolder);
     const dateStr = card.createdAt.split("T")[0];
     const filename = `${dateStr} ${sanitizeFilename(card.title)}.md`;
-    const filePath = path.join(folderPath, filename);
+    const filePath = path.join(VAULT_BASE, filename);
 
     // MD 재생성 (최신 Q&A 포함)
     const markdown = cardToMarkdown(card);

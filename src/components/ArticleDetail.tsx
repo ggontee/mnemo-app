@@ -168,15 +168,13 @@ export default function ArticleDetail({
             ))}
           </div>
 
-          {/* AI 예상 질문 & 리서치 */}
+          {/* Deep Dive — 사용자 직접 질문만 */}
           <div>
             <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
               🧠 Deep Dive
             </h2>
-            <p className="text-sm text-gray-400 mb-3">
-              질문을 탭하면 AI가 리서치 결과를 생성합니다
-            </p>
 
+            {/* 사용자가 추가한 질문만 표시 */}
             {article.aiQuestions && article.aiQuestions.length > 0 && (
               <div className="space-y-3 mb-4">
                 {article.aiQuestions.map((q) => (
