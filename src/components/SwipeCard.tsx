@@ -10,11 +10,12 @@ interface SwipeCardProps {
   onSwipe: (direction: "left" | "right") => void;
   isTop: boolean;
   disabled?: boolean;
+  exitDirection?: "left" | "right" | null;
 }
 
 const SWIPE_THRESHOLD = 120;
 
-export default function SwipeCard({ article, onSwipe, isTop, disabled }: SwipeCardProps) {
+export default function SwipeCard({ article, onSwipe, isTop, disabled, exitDirection }: SwipeCardProps) {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-300, 0, 300], [-15, 0, 15]);
   const opacity = useTransform(x, [-300, -100, 0, 100, 300], [0.5, 1, 1, 1, 0.5]);
@@ -51,7 +52,7 @@ export default function SwipeCard({ article, onSwipe, isTop, disabled }: SwipeCa
       initial={{ scale: isTop ? 1 : 0.95, y: isTop ? 0 : 10 }}
       animate={{ scale: isTop ? 1 : 0.95, y: isTop ? 0 : 10 }}
       exit={{
-        x: x.get() > 0 ? 400 : -400,
+        x: exitDirection === "right" ? 400 : exitDirection === "left" ? -400 : (x.get() > 0 ? 400 : -400),
         opacity: 0,
         transition: { duration: 0.3 },
       }}

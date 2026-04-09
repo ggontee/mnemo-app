@@ -16,6 +16,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
   const [articles, setArticles] = useState<Article[]>(initialArticles);
   const [commentTarget, setCommentTarget] = useState<Article | null>(null);
   const [isCommentOpen, setIsCommentOpen] = useState(false);
+  const [exitDirection, setExitDirection] = useState<"left" | "right" | null>(null);
 
   const pendingArticles = articles.filter((a) => a.status === "pending");
 
@@ -26,6 +27,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
       if (pendingArticles.length === 0) return;
       const current = pendingArticles[0];
 
+      setExitDirection(direction);
       if (direction === "left") {
         performKeep(current.id, "discarded", undefined);
       } else if (direction === "right") {
@@ -60,6 +62,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
   const handleCommentConfirm = useCallback(
     (comment: string) => {
       if (!commentTarget) return;
+      setExitDirection("right");
       performKeep(commentTarget.id, "kept", comment || undefined);
       setIsCommentOpen(false);
       setCommentTarget(null);
@@ -115,6 +118,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
                 onSwipe={handleSwipe}
                 isTop={i === 0}
                 disabled={isCommentOpen}
+                exitDirection={i === 0 ? exitDirection : null}
               />
             ))}
           </AnimatePresence>
