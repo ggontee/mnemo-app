@@ -50,3 +50,17 @@ data/raw/
 
 # 파이프라인 로그
 pipeline/cron.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# Logs
+data/logs/
+
+# macOS
+.DS_Store
+node_modules/

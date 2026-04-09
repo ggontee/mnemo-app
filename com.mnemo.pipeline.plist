@@ -8,7 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/run_pipeline.sh</string>
+        <string>/Users/jaehyungoh/coding/mnemo-app/run_pipeline.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -37,13 +37,13 @@
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/launchd_stdout.log</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app/data/logs/launchd_stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/launchd_stderr.log</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app/data/logs/launchd_stderr.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>

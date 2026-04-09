@@ -7,7 +7,7 @@ set -e
 export PATH="/opt/homebrew/bin:$PATH"
 
 # 프로젝트 디렉토리
-PROJECT_DIR="$HOME/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app"
+PROJECT_DIR="$HOME/coding/mnemo-app"
 LOG_DIR="$PROJECT_DIR/data/logs"
 LOG_FILE="$LOG_DIR/pipeline_$(date +%Y%m%d_%H%M%S).log"
 

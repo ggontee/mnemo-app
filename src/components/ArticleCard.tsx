@@ -6,12 +6,48 @@ interface ArticleCardProps {
   article: Article;
 }
 
+function getSignalBadge(signalType?: string) {
+  switch (signalType) {
+    case "reinforcing":
+      return { text: "[+]", color: "bg-emerald-100 text-emerald-700" };
+    case "contradicting":
+      return { text: "[⚠️]", color: "bg-amber-100 text-amber-700" };
+    case "new":
+      return { text: "[NEW]", color: "bg-blue-100 text-blue-700" };
+    default:
+      return null;
+  }
+}
+
 export default function ArticleCard({ article }: ArticleCardProps) {
+  const signalBadge = getSignalBadge(article.signalType);
+
   return (
     <div className="flex flex-col gap-4 p-6 h-full">
+      {/* 테마 태그 (있으면) */}
+      {article.themeIds && article.themeIds.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {article.themeIds.map((themeId) => (
+            <span
+              key={themeId}
+              className="px-2 py-0.5 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-full"
+            >
+              #{themeId}
+            </span>
+          ))}
+        </div>
+      )}
+
       {/* 출처 & 날짜 */}
       <div className="flex items-center justify-between text-sm text-gray-500">
-        <span className="font-medium text-indigo-600">{article.sourceName}</span>
+        <div className="flex items-center gap-2">
+          <span className="font-medium text-indigo-600">{article.sourceName}</span>
+          {signalBadge && (
+            <span className={`px-1.5 py-0.5 text-xs font-medium rounded ${signalBadge.color}`}>
+              {signalBadge.text}
+            </span>
+          )}
+        </div>
         <span>{article.createdAt}</span>
       </div>
 

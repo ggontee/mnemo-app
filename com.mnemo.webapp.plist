@@ -8,11 +8,11 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/start_webapp.sh</string>
+        <string>/Users/jaehyungoh/coding/mnemo-app/start_webapp.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app</string>
 
     <key>RunAtLoad</key>
     <true/>
@@ -21,9 +21,9 @@
     <true/>
 
     <key>StandardOutPath</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/webapp_stdout.log</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app/data/logs/webapp_stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/ggontee/coding/openclaw-workspace/projects/project-mnemo-mmeptsf1/code/mnemo-app/data/logs/webapp_stderr.log</string>
+    <string>/Users/jaehyungoh/coding/mnemo-app/data/logs/webapp_stderr.log</string>
 </dict>
 </plist>

@@ -27,10 +27,8 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
       const current = pendingArticles[0];
 
       if (direction === "left") {
-        // 바로 discard
         performKeep(current.id, "discarded", undefined);
-      } else {
-        // 우측: 코멘트 모달 열기
+      } else if (direction === "right") {
         setCommentTarget(current);
         setIsCommentOpen(true);
       }
