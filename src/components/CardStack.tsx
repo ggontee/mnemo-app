@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Article } from "@/lib/types";
 import { updateCardStatus } from "@/lib/data";
@@ -16,7 +16,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
   const [articles, setArticles] = useState<Article[]>(initialArticles);
   const [commentTarget, setCommentTarget] = useState<Article | null>(null);
   const [isCommentOpen, setIsCommentOpen] = useState(false);
-  const [exitDirection, setExitDirection] = useState<"left" | "right" | null>(null);
+  const exitDirectionRef = useRef<"left" | "right" | null>(null);
 
   const pendingArticles = articles.filter((a) => a.status === "pending");
 
@@ -27,7 +27,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
       if (pendingArticles.length === 0) return;
       const current = pendingArticles[0];
 
-      setExitDirection(direction);
+      exitDirectionRef.current = direction;
       if (direction === "left") {
         performKeep(current.id, "discarded", undefined);
       } else if (direction === "right") {
@@ -62,7 +62,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
   const handleCommentConfirm = useCallback(
     (comment: string) => {
       if (!commentTarget) return;
-      setExitDirection("right");
+      exitDirectionRef.current = "right";
       performKeep(commentTarget.id, "kept", comment || undefined);
       setIsCommentOpen(false);
       setCommentTarget(null);
@@ -118,7 +118,7 @@ export default function CardStack({ initialArticles, onArticlesChange }: CardSta
                 onSwipe={handleSwipe}
                 isTop={i === 0}
                 disabled={isCommentOpen}
-                exitDirection={i === 0 ? exitDirection : null}
+                exitDirectionRef={exitDirectionRef}
               />
             ))}
           </AnimatePresence>
