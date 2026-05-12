@@ -38,8 +38,8 @@ cd "$M2_PROJECT"
 echo "[M2] git pull"
 git pull origin main
 
-echo "[M2] npm install (production)"
-npm install --omit=dev --no-audit --no-fund
+echo "[M2] npm install (devDeps 포함 — next.config.ts transpile 위해 typescript 필요)"
+npm install --no-audit --no-fund
 
 echo "[M2] next build"
 npx next build

@@ -63,8 +63,9 @@ pmset -g | grep -E 'standby |powernap|sleep |disksleep|displaysleep|womp|tcpkeep
 hr "7. 의존성 설치 + production 빌드"
 cd "$PROJECT_DIR"
 export PATH="/opt/homebrew/bin:$PATH"
-echo "  npm install --omit=dev..."
-npm install --omit=dev --no-audit --no-fund
+# next.config.ts 를 빌드 시점에 transpile 하려면 typescript(devDep)가 필요하므로 full install
+echo "  npm install (typescript 등 devDeps 포함, 빌드용)..."
+npm install --no-audit --no-fund
 echo
 echo "  npx next build..."
 npx next build
