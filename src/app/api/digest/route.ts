@@ -23,7 +23,7 @@ function summarizeSignalChanges(
   theme: any,
   cardsInPeriod: any[]
 ): { theme: string; newSignals: number; types: string[] } {
-  const types = [...new Set(cardsInPeriod.map((c) => c.signalType))];
+  const types: string[] = [...new Set(cardsInPeriod.map((c) => c.signalType as string))];
   return {
     theme: theme.name,
     newSignals: cardsInPeriod.length,

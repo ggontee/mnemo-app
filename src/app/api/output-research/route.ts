@@ -165,8 +165,8 @@ async function performDeepDive(
 
   // 답변에서 URL 소스 추출
   const urlRegex = /https?:\/\/[^\s\)]+/g;
-  const urls = answer.match(urlRegex) || [];
-  const sources = [...new Set(urls)].slice(0, 5);
+  const urls: string[] = answer.match(urlRegex) || [];
+  const sources: string[] = [...new Set(urls)].slice(0, 5);
 
   return { answer, sources };
 }
